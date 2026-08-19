@@ -1,7 +1,7 @@
-import streamlit as st 
-import pandas as pd 
+import streamlit as st
+import streamlit.components.v1 as components
+import pandas as pd
 from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 import sys
 import os
 
@@ -62,7 +62,7 @@ if uploaded_file is not None:
                                 html={'style': {'theme': theme,
                                                 'primary_colors': primary_colors}})
                 
-            st_profile_report(pr)
+            components.html(pr.to_html(), height=1000, scrolling=True)
         else:
             st.error('File size exceeds the limit of 10 MB! Your file size is {:.2f} MB'.format(file_size))
     else:
