@@ -1,10 +1,9 @@
 numpy==2.1.0
-pandas
+pandas<3.0
 scipy
 matplotlib
 streamlit
 ydata-profiling
-streamlit-pandas-profiling
 openpyxl
 xlrd
-setuptools
+setuptools<82
